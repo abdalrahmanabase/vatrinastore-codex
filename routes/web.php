@@ -17,6 +17,9 @@ Route::get('/shop', function () {
     return view('shop', ['products' => $products]);
 })->name('shop');
 
+Route::view('/cart', 'cart')->name('cart');
+Route::view('/checkout', 'checkout')->name('checkout');
+
 require __DIR__.'/auth.php';
 
 Route::middleware(['auth', 'admin'])->group(function () {

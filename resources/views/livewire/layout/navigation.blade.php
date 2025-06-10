@@ -36,6 +36,12 @@ new class extends Component
                     <x-nav-link :href="route('shop')" :active="request()->routeIs('shop')" wire:navigate>
                         {{ __('Shop') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('cart')" :active="request()->routeIs('cart')" wire:navigate>
+                        {{ __('Cart') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('checkout')" :active="request()->routeIs('checkout')" wire:navigate>
+                        {{ __('Checkout') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -89,6 +95,12 @@ new class extends Component
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('shop')" :active="request()->routeIs('shop')" wire:navigate>
                 {{ __('Shop') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('cart')" :active="request()->routeIs('cart')" wire:navigate>
+                {{ __('Cart') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('checkout')" :active="request()->routeIs('checkout')" wire:navigate>
+                {{ __('Checkout') }}
             </x-responsive-nav-link>
         </div>
 
