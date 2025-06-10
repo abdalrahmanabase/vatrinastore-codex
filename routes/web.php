@@ -12,6 +12,11 @@ Route::view('profile', 'profile')
     ->middleware(['auth'])
     ->name('profile');
 
+Route::get('/shop', function () {
+    $products = App\Models\Product::latest()->get();
+    return view('shop', ['products' => $products]);
+})->name('shop');
+
 require __DIR__.'/auth.php';
 
 Route::middleware(['auth', 'admin'])->group(function () {
